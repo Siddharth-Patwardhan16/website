@@ -114,7 +114,7 @@
         const imageData = canvas.toDataURL("image/jpeg");
 
         try {
-          const response = await fetch("/predict", {
+          const response = await fetch("https://gcoeara-hand-sign-project.netlify.app/predict", { // Replace with your backend URL
             method: "POST",
             headers: {
               "Content-Type": "application/json",
