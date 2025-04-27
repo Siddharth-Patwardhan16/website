@@ -7,20 +7,50 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='style.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='contact.css') }}"
+    />
   </head>
   <body>
-    <nav>
-      <ul>
-        <li><a href="/home">Home</a></li>
-        <li><a href="/dashboard">Dashboard</a></li>
-        <li><a href="/contact">Contact Us</a></li>
-        <li><a href="/logout">Logout</a></li>
-      </ul>
-    </nav>
-    <section>
-      <h1>Contact Us</h1>
-      <p>Email: support@handgestureapp.com</p>
-      <p>Phone: +123-456-7890</p>
+    <header>
+      <nav>
+        <ul>
+          <li><a href="/smart_home">Home</a></li>
+          <li><a href="/dashboard">Dashboard</a></li>
+          <li><a href="/useManual">User Manual</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="user-icon">
+        👤
+        <div class="dropdown">
+          <a href="/logout">Logout</a>
+        </div>
+      </div>
+    </header>
+    <section class="contact-section">
+      <h1>CONTACT US</h1>
+      <p>
+        Have a question about your order, shipping, or want to know more about
+        our company? Please visit our <a href="#">Help Center</a> before you
+        submit a request.
+      </p>
+      <p>
+        Want to return or exchange an item? Please visit our
+        <a href="#">Returns Center</a>.
+      </p>
+      <p>
+        If you’ve had something for a while and want to give it a new life,
+        check out
+        <a href="#">Elevated Faith Pre-Loved</a>. It’s the official destination
+        to buy and sell pre-loved EF where you can sell for credit or cash!
+      </p>
+      <p>
+        Please fill out the general inquiry contact form below to get in contact
+        with a representative. Please allow up to 3 business days for a
+        response. Thank you for your patience!
+      </p>
     </section>
   </body>
 </html>

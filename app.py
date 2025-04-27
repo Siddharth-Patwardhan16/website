@@ -75,7 +75,7 @@ def dashboard():
 @app.route('/logout')
 def logout():
     session.pop('username', None)
-    flash('Logged out successfully.', 'info')
+    flash('Logged out successfully.', 'info')   
     return redirect(url_for('login'))
 
 @app.route('/predict', methods=['POST'])
@@ -119,7 +119,18 @@ def predict():
 
 @app.route('/smart_home')
 def smart_home():
+    print("Accessing /smart_home route")
+    if 'username' not in session:
+        flash('Please login first.', 'warning')
+        return redirect(url_for('login'))
     return render_template('smart_home.html')
+
+@app.route('/contact')
+def contact():
+    if 'username' not in session:
+        flash('Please login first.', 'warning')
+        return redirect(url_for('login'))
+    return render_template('contact.html')
 
 if __name__ == '__main__':
     app.run(debug=True)

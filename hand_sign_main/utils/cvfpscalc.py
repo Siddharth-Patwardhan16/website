@@ -1,7 +1,6 @@
 from collections import deque
 import cv2 as cv
 
-
 class CvFpsCalc(object):
     def __init__(self, buffer_len=1):
         self._start_tick = cv.getTickCount()
