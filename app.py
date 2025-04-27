@@ -7,9 +7,11 @@ import numpy as np
 from gesture_service import GestureService
 from collections import deque
 import mediapipe as mp
+from flask_cors import CORS  # Add this import
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
+CORS(app, resources={r"/predict": {"origins": "https://gcoeara-hand-sign-project.netlify.app"}})  # Enable CORS for /predict
 
 gesture_service = GestureService()
 point_history = deque(maxlen=16)
